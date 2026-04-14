@@ -1,7 +1,12 @@
 import random
+import os
+import sys
 
 import matplotlib.pyplot as plt
 import streamlit as st
+
+# Add the parent directory to sys.path to allow imports from the root
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
 from main import build_sample_topology
 from controller.routing import send_traffic
